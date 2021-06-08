@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.page {
+  background-color: #FFF;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.head .input-item{
+  width: 174px;
+  margin-bottom: 16px;
+}
+.head .button-item{
+  margin-bottom: 16px;
+}
+.main {
+  padding: 16px;
+}
+
+.my-layout {
+  padding-bottom: 16px;
+  background-color: #FFF;
+}
+.my-layout .title {
+  line-height: 60px;
+  padding: 0 16px;
+  font-size: 18px;
+}
+.my-layout .page{
+  padding: 0 16px;
+}
+.my-layout .head {
+  border: 1px solid #f0f0f0;
+  border-bottom: none;
+}
+.my-layout .main {
+  padding: 0;
+}

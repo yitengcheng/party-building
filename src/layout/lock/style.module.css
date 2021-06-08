@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d3a4b;
+}
+.container .box {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.container .box .group > * {
+  border-radius: 0;
+}
+.container .box .group :global(.ant-btn) {
+  margin-left: -1px;
+}

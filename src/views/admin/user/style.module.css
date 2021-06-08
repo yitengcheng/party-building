@@ -1,0 +1,12 @@
+.page {
+  background-color: #fff;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #dcdfe6;
+}
+.main {
+  padding: 16px;
+}

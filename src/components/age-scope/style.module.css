@@ -1,0 +1,10 @@
+.box {
+  display: flex !important;
+  align-items: center;
+}
+.box .input {
+  width: calc(50% - 56px);
+}
+.box .inte {
+  padding: 0 10px;
+}

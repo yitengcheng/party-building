@@ -1,0 +1,8 @@
+.page {
+  padding: 16px;
+  background-color: #fff;
+}
+.page .form {
+  width: 400px;
+  /* margin: 0 auto; */
+}

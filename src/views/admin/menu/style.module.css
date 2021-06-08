@@ -1,0 +1,6 @@
+.form-item-hidden{
+    margin-bottom: 0;
+}
+.form-item-hidden :global(.ant-form-item-control-input){
+    min-height: 0;
+}
