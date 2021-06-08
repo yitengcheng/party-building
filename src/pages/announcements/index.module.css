@@ -1,0 +1,17 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.form {
+    background-color: #fff;
+    padding-top: 20px;
+}
+.tableHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #f0f0f0;
+  flex-direction: row;
+}
