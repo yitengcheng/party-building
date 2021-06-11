@@ -30,6 +30,11 @@ class AppLayout extends React.Component {
           component: React.lazy(() => import("@/pages/announcements")),
           permis: true,
         },
+        {
+          path: "/mainIdea/posts",
+          component: React.lazy(() => import("@/pages/mainIdea/posts")),
+          permis: true,
+        },
       ],
     });
     // this.unsubscribe = store.subscribe(() => {

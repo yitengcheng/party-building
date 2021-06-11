@@ -91,6 +91,7 @@ export default class AppSider extends React.Component {
           >
             {/* {this.menuTag(this.state.menulist)} */}
             <Menu.Item key={"/announcements"}>公告管理</Menu.Item>
+            <Menu.Item key={"/mainIdea/posts"}>文章管理</Menu.Item>
           </Menu>
         </div>
       </Layout.Sider>

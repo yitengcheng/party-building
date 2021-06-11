@@ -18,6 +18,7 @@ import AgeRangeFormItem from "./form/AgeRangeFormItem";
 import SelectTreeFormItem from "./form/SelectTreeFormItem";
 import DictShow from "./common/DictShow";
 import Camera from "./common/Camera";
+import BraftEditor from "./common/BraftEditor";
 import * as config from "./form/config";
 import MyTable from "./table/Table";
 
@@ -44,4 +45,5 @@ export {
   DictShow,
   Camera,
   config,
+  BraftEditor,
 };

@@ -16,10 +16,11 @@
     "@testing-library/user-event": "12.8.3",
     "antd": "4.14.0",
     "axios": "0.21.1",
+    "braft-editor": "^2.3.9",
     "crypto-js": "3.1.9-1",
     "file-saver": "2.0.5",
     "jsonp": "0.2.1",
-    "jspdf-html2canvas": "1.4.9",  
+    "jspdf-html2canvas": "1.4.9",
     "lodash": "4.17.21",
     "moment": "2.29.1",
     "print-js": "1.6.0",
@@ -36,16 +37,16 @@
     "xlsx": "0.16.9"
   },
   "devDependencies": {
+    "babel-plugin-import": "1.13.3",
     "customize-cra": "1.0.0",
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.22.0",
-    "prettier": "2.2.1",
-    "react-app-rewired": "2.1.8",
     "less": "4.1.1",
     "less-loader": "5.0.0",
-    "babel-plugin-import": "1.13.3"
+    "prettier": "2.2.1",
+    "react-app-rewired": "2.1.8"
   },
   "browserslist": {
     "production": [

@@ -68,7 +68,8 @@ export default class WebCamWebAPI extends React.Component {
         this.connectDevice();
       } else {
         this.setState({
-          tips: "没有可用照片采集设备或者浏览器不支持此功能，请保证设备可正常使用(此方式不支持IE浏览器)",
+          tips:
+            "没有可用照片采集设备或者浏览器不支持此功能，请保证设备可正常使用(此方式不支持IE浏览器)",
         });
       }
     } else {

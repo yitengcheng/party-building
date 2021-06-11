@@ -7,9 +7,9 @@ import {
   DateRangeFormItem,
 } from "@/components";
 import styles from "./index.module.css";
-import Detail from "./detail";
+import AddPost from "./addPost";
 
-export default class UserControl extends Component {
+export default class Posts extends Component {
   columns = [
     {
       title: "序号",
@@ -19,11 +19,11 @@ export default class UserControl extends Component {
       width: 80,
     },
     {
-      title: "公告标题",
+      title: "文章标题",
       width: 80,
     },
     {
-      title: "状态",
+      title: "分类",
       width: 80,
     },
     {
@@ -35,7 +35,19 @@ export default class UserControl extends Component {
       width: 80,
     },
     {
-      title: "内容",
+      title: "评论总数",
+      width: 80,
+    },
+    {
+      title: "点赞总数",
+      width: 80,
+    },
+    {
+      title: "审核状态",
+      width: 80,
+    },
+    {
+      title: "标签",
       width: 80,
     },
     {
@@ -50,9 +62,7 @@ export default class UserControl extends Component {
             size="small"
             onClick={() =>
               this.setState({
-                visible: true,
-                modalFlag: false,
-                detail: record,
+                lookVisible: true,
               })
             }
           >
@@ -74,13 +84,14 @@ export default class UserControl extends Component {
     tableData: [],
     pageNo: 1,
     pageSize: 10,
-    visible: false,
+    addVisible: false,
+    lookVisible: false,
     modalFlag: false,
   };
   getData(pageNo) {}
   delNotice() {
     Modal.confirm({
-      content: "是否确认删除此条公告",
+      content: "是否确认删除此文章",
       onOk: () => {},
     });
   }
@@ -93,7 +104,7 @@ export default class UserControl extends Component {
       .catch();
   }
   render() {
-    const { tableData, visible, modalFlag, detail } = this.state;
+    const { tableData, addVisible } = this.state;
     return (
       <Layout className={styles.container}>
         <MyTable
@@ -111,20 +122,39 @@ export default class UserControl extends Component {
               >
                 <TextFormItem
                   required={false}
-                  placeholder="输入公告标题"
+                  placeholder="输入文章标题"
                   allowClear
                   maxLength={40}
                   style={{ width: "260px", marginBottom: "16px" }}
                 />
                 <DictFormItem
                   required={false}
-                  placeholder="请选择状态"
+                  placeholder="请选择分类"
                   allowClear
                   style={{ width: "260px", marginBottom: "16px" }}
                 />
                 <DateRangeFormItem
                   required={false}
                   placeholder={["起始发布时间", "结束发布时间"]}
+                  allowClear
+                  style={{ width: "260px", marginBottom: "16px" }}
+                />
+                <TextFormItem
+                  required={false}
+                  placeholder="输入创建人电话"
+                  allowClear
+                  maxLength={40}
+                  style={{ width: "260px", marginBottom: "16px" }}
+                />
+                <DictFormItem
+                  required={false}
+                  placeholder="请选择审核状态"
+                  allowClear
+                  style={{ width: "260px", marginBottom: "16px" }}
+                />
+                <DictFormItem
+                  required={false}
+                  placeholder="请选择标签"
                   allowClear
                   style={{ width: "260px", marginBottom: "16px" }}
                 />
@@ -136,7 +166,7 @@ export default class UserControl extends Component {
                 <Button
                   type="primary"
                   onClick={() => {
-                    this.setState({ visible: true, modalFlag: true });
+                    this.setState({ addVisible: true, modalFlag: true });
                   }}
                 >
                   新增
@@ -146,16 +176,15 @@ export default class UserControl extends Component {
           }
         />
         <Modal
-          title={modalFlag ? "新增公告" : "查看公告"}
-          visible={visible}
-          width={600}
-          onCancel={() => this.setState({ visible: false })}
+          title="新增文章"
+          visible={addVisible}
+          width={1200}
+          onCancel={() => this.setState({ addVisible: false })}
         >
-          <Detail
+          <AddPost
             onClose={() => {
-              this.setState({ visible: false });
+              this.setState({ addVisible: false });
             }}
-            detail={detail}
           />
         </Modal>
       </Layout>
